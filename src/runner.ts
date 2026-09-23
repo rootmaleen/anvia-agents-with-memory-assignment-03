@@ -1,12 +1,12 @@
 import { createAgent } from "./agent";
-import { mockOrderService } from "./services/mock-order-services";
-import { createOrderTool } from "./tools/order-tools";
+import { mockRestaurantService } from "./services/mock-restaurant-services";
+import { createRestaurantTools } from "./tools/restaurant-tools";
 
-const orderTools = createOrderTool({ service: mockOrderService })
+const restaurantTools = createRestaurantTools({ service: mockRestaurantService });
 const agent = createAgent({
-  tools: [orderTools]
+  tools: restaurantTools,
 });
 
 await agent.generate({
-  prompt: "What is the status oF order ID: 1001"
-})
+  prompt: "Saya ingin pesan Nasi Goreng 3 dan Es Teh 2 untuk delivery ke Jl. Melati No. 10, atas nama Budi.",
+});
