@@ -1,4 +1,4 @@
-export const orderService = {
+export const restaurantService = {
   getOrderStatus: (orderId: string) => {
     //Get order from database
     const orderData = `
