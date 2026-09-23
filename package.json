@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "pnpm tsx ./src/index.ts",
+    "runner": "pnpm tsx ./src/runner.ts",
     "contract:emit": "prisma contract emit"
   },
   "keywords": [],
